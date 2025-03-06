@@ -7,6 +7,7 @@ package mx.itson.carrito.ui;
 import java.util.Scanner;
 import mx.itson.carrito.entidades.Carro;
 import mx.itson.carrito.enums.TipoMotor;
+import mx.itson.carrito.enums.Transmisión;
 
 /**
  *
@@ -31,6 +32,7 @@ public class Main {
         bmw.setAnio(2021);
         bmw.setKilometraje(10000);
         bmw.setTipoMotor(TipoMotor.HÍBRIDO);
+        bmw.setTransmision(Transmisión.AUTOMÁTICO);
         
         // Iniciamos el método contenido en la clase Carro.        
         double tiempo = bmw.calcularTiempo(distancia, velocidad);
