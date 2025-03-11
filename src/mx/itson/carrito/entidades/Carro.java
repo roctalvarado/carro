@@ -14,6 +14,20 @@ import mx.itson.carrito.enums.Transmision;
 public class Carro {
 
     /**
+     * @return the estereo
+     */
+    public EquipoSonido getEstereo() {
+        return estereo;
+    }
+
+    /**
+     * @param estereo the estereo to set
+     */
+    public void setEstereo(EquipoSonido estereo) {
+        this.estereo = estereo;
+    }
+
+    /**
      * @return the aseguradora
      */
     public Aseguradora getAseguradora() {
@@ -133,6 +147,7 @@ public class Carro {
     private Transmision transmision;
     private Propietario propietario;
     private Aseguradora aseguradora;
+    private EquipoSonido estereo;
     
     /**
      * Calcula el tiempo que tarda el carro en recorrer una distancia.

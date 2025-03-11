@@ -7,6 +7,7 @@ package mx.itson.carrito.ui;
 import java.util.Scanner;
 import mx.itson.carrito.entidades.Aseguradora;
 import mx.itson.carrito.entidades.Carro;
+import mx.itson.carrito.entidades.EquipoSonido;
 import mx.itson.carrito.entidades.Propietario;
 import mx.itson.carrito.enums.TipoMotor;
 import mx.itson.carrito.enums.Transmision;
@@ -50,6 +51,14 @@ public class Main {
         aser.setEmail("axasoluciones@axa.com.mx");
         aser.setFondos(50000);
         
+        EquipoSonido e = new EquipoSonido();
+        e.setMusica("Sony");
+        e.setPrecio(5000);
+        e.TieneBluetooth(true);
+        e.setMusica("Drum and Bass");
+        
+        bmw.setEstereo(e);
+        
         // Iniciamos el método contenido en la clase Carro.        
         double tiempo = bmw.calcularTiempo(distancia, velocidad);
         
@@ -60,7 +69,8 @@ public class Main {
                 + " será " + tiempo +
                 " y ahora su kilometraje es de " + bmw.getKilometraje() +
                 " El propietario de este carro es " + bmw.getPropietario().getNombre() +
-                " La aseguradora de este carro es " + bmw.getAseguradora().getNombre()); 
+                " La aseguradora de este carro es " + bmw.getAseguradora().getNombre() +
+                " El equipo de sonido está reproduciendo " + bmw.getEstereo().getMusica()); 
         
     }
 }
