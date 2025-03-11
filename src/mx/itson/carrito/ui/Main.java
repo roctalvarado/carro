@@ -5,9 +5,11 @@
 package mx.itson.carrito.ui;
 
 import java.util.Scanner;
+import mx.itson.carrito.entidades.Aseguradora;
 import mx.itson.carrito.entidades.Carro;
+import mx.itson.carrito.entidades.Propietario;
 import mx.itson.carrito.enums.TipoMotor;
-import mx.itson.carrito.enums.Transmisión;
+import mx.itson.carrito.enums.Transmision;
 
 /**
  *
@@ -32,7 +34,21 @@ public class Main {
         bmw.setAnio(2021);
         bmw.setKilometraje(10000);
         bmw.setTipoMotor(TipoMotor.HÍBRIDO);
-        bmw.setTransmision(Transmisión.AUTOMÁTICO);
+        bmw.setTransmision(Transmision.AUTOMÁTICO);
+        
+        Propietario prop = new Propietario();
+        prop.setNombre("Panfilo Kevin");
+        prop.setDomicilio("Calle 23 colonia Cengro");
+        prop.setTelefono("6221734422");
+        prop.setEmail("panfilomeno@gmail.com");
+        
+        bmw.setPropietario(prop);
+                
+        Aseguradora aser = new Aseguradora();
+        aser.setNombre("AXA");
+        aser.setTelefono("8009001292");
+        aser.setEmail("axasoluciones@axa.com.mx");
+        aser.setFondos(50000);
         
         // Iniciamos el método contenido en la clase Carro.        
         double tiempo = bmw.calcularTiempo(distancia, velocidad);
@@ -42,7 +58,9 @@ public class Main {
                 " de color " + bmw.getColor() + 
                 " y cuyo modelo es " + bmw.getAnio() 
                 + " será " + tiempo +
-                " y ahora su kilometraje es de " + bmw.getKilometraje());
+                " y ahora su kilometraje es de " + bmw.getKilometraje() +
+                " El propietario de este carro es " + bmw.getPropietario().getNombre() +
+                " La aseguradora de este carro es " + bmw.getAseguradora().getNombre()); 
         
     }
 }

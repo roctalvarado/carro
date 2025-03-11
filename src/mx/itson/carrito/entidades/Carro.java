@@ -5,7 +5,7 @@
 package mx.itson.carrito.entidades;
 
 import mx.itson.carrito.enums.TipoMotor;
-import mx.itson.carrito.enums.Transmisión;
+import mx.itson.carrito.enums.Transmision;
 
 /**
  *
@@ -14,16 +14,44 @@ import mx.itson.carrito.enums.Transmisión;
 public class Carro {
 
     /**
+     * @return the aseguradora
+     */
+    public Aseguradora getAseguradora() {
+        return aseguradora;
+    }
+
+    /**
+     * @param aseguradora the aseguradora to set
+     */
+    public void setAseguradora(Aseguradora aseguradora) {
+        this.aseguradora = aseguradora;
+    }
+
+    /**
+     * @return the propietario
+     */
+    public Propietario getPropietario() {
+        return propietario;
+    }
+
+    /**
+     * @param propietario the propietario to set
+     */
+    public void setPropietario(Propietario propietario) {
+        this.propietario = propietario;
+    }
+
+    /**
      * @return the transmision
      */
-    public Transmisión getTransmision() {
+    public Transmision getTransmision() {
         return transmision;
     }
 
     /**
      * @param transmision the transmision to set
      */
-    public void setTransmision(Transmisión transmision) {
+    public void setTransmision(Transmision transmision) {
         this.transmision = transmision;
     }
 
@@ -102,7 +130,9 @@ public class Carro {
     private String marca;
     private double kilometraje;
     private TipoMotor tipoMotor;
-    private Transmisión transmision;
+    private Transmision transmision;
+    private Propietario propietario;
+    private Aseguradora aseguradora;
     
     /**
      * Calcula el tiempo que tarda el carro en recorrer una distancia.
@@ -112,7 +142,7 @@ public class Carro {
      */
     public double calcularTiempo(double distancia, double velocidad) {
         this.kilometraje += distancia;
-        // La línea de arruva es lo mismo que esta de abajo
+        // La línea de arriba es lo mismo que esta de abajo
         // this.kilometraje = this kilometraje + distancia
         double tiempo = distancia / velocidad;
         return tiempo;

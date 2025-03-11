@@ -8,7 +8,7 @@ package mx.itson.carrito.enums;
  *
  * @author rocta
  */
-public enum Transmisión {
+public enum Transmision {
     
     AUTOMÁTICO,
     MANUAL
